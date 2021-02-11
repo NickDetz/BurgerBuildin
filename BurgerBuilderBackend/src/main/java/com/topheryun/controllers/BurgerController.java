@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +23,7 @@ public class BurgerController {
 		this.burgerService = burgerService;
 	}
 	
-	@PutMapping()
+	@PostMapping()
 	public void insertBurger(@RequestBody Burger burger) {
 		if (verifyBurger(burger)) {
 			burgerService.insertBurger(burger);
@@ -32,9 +32,10 @@ public class BurgerController {
 	
 	@GetMapping()
 	public ResponseEntity<List<Burger>> getAllBurgers() {
-		burgerService.getAllBurgers();
-		// finish returning response entities
-		return null;
+		List<Burger> burgerList = burgerService.getAllBurgers();
+		if (burgerList.size() > 0) 
+			return ResponseEntity.status(200).body(burgerList);
+		else return ResponseEntity.status(418).build();
 	}
 	
 	private boolean verifyBurger(Burger burger) {
