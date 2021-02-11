@@ -12,8 +12,9 @@ const  App = () => {
   return (
     <Fragment>
       <div>
-        <HeaderNav/>
+        
         <Router>
+        <HeaderNav/>
         <Switch>
           <Route exact path='/'>
             <HomePage/>
@@ -22,12 +23,14 @@ const  App = () => {
           <Route exact path='/NewBurger'>
             <>
             <Burger/>
+            
             </>
           </Route>
 
-            <Route exact path='/BurgerList'>
+            <Route exact path='/Burgers'>
               <>
               <BurgerList/>
+              
               </>
             </Route>
         </Switch>
