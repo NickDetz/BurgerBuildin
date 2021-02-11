@@ -8,6 +8,7 @@ const HeaderNav = () => {
         <Navbar bg="dark" variant="dark" className="display-flex justify-content-center">
             <i className="fas fa-hamburger mx-2" style={{color: 'yellow'}}></i>
         <Navbar.Brand >Burgers!</Navbar.Brand>
+        <Link to='/'>Back To Home Page</Link>
         
       </Navbar>
     )
