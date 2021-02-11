@@ -16,7 +16,18 @@ import './burger.css'
     const [ingredList, addIngred] = useState([]);
 
 
-
+    const SendBurger = () => {
+        console.log('Burger')
+        console.log(ingredList[3])
+        console.log(burgerName)
+         axios.post(`http://localhost:8080/burger-builder/burger`,{
+             name: burgerName,
+             ingredient1: ingredList[0],
+             ingredient2: ingredList[1],
+             ingredient3: ingredList[2],
+             ingredient4: ingredList[3],
+         })
+    }
 
     
     
@@ -46,7 +57,7 @@ import './burger.css'
                 </Modal.Body>
 
                 <Modal.Footer>
-                <Button variant="secondary">Send</Button>
+                <Button variant="secondary" onClick={() => SendBurger()}>Send</Button>
             </Modal.Footer>
             </Modal.Dialog>
             </Col>
