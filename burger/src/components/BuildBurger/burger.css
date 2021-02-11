@@ -9,14 +9,32 @@ body{
 
 
 .home-page-alignment{
-  background-color: orange;
-  padding: .5em;
+  /* background-color: orange; */
+  padding: 1em;
+  /* float: left; */
 
 }
 
+.my-button{
+  /* padding: 15px 32px; */
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
 .home-page-item{
-  background-color: black;
-  width: 50em;
+    float: left;
+    width:  400px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: .4em;
+    margin-left: auto;
+    margin-right: auto;
+    border:solid black .2em;
+    border-radius: 1.5em;
 
 }
 
