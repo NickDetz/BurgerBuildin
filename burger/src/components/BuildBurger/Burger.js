@@ -86,7 +86,7 @@ import './burger.css'
                 
                 </Modal.Footer>
                 </Modal.Dialog>
-                
+              
             </Col>
             </Row>
 

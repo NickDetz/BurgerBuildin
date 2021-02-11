@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import HeaderNav from './components/HeaderNav';
 import HomePage from './components/HomePage';
 import Burger from './components/BuildBurger/Burger';
+import BurgerList from './components/BurgerFinderComponents/BurgerList';
 
 
 
@@ -24,6 +25,11 @@ const  App = () => {
             </>
           </Route>
 
+            <Route exact path='/BurgerList'>
+              <>
+              <BurgerList/>
+              </>
+            </Route>
         </Switch>
         </Router>
       </div>
