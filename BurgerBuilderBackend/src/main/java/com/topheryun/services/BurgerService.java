@@ -2,9 +2,12 @@ package com.topheryun.services;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.topheryun.daos.IBurgerDAO;
 import com.topheryun.models.Burger;
 
+@Service
 public class BurgerService {
 
 	private IBurgerDAO burgerDAO;
