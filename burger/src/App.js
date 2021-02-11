@@ -3,6 +3,8 @@ import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HeaderNav from './components/HeaderNav';
 import HomePage from './components/HomePage';
+import Burger from './components/BuildBurger/Burger';
+
 
 
 const  App = () => {
@@ -14,6 +16,12 @@ const  App = () => {
         <Switch>
           <Route exact path='/'>
             <HomePage/>
+          </Route>
+
+          <Route exact path='/NewBurger'>
+            <>
+            <Burger/>
+            </>
           </Route>
 
         </Switch>
