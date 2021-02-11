@@ -41,3 +41,4 @@ Craving a burger? BurgerBuildin will offer you limitless choices with dynamic cr
 * [Jason Schroeder](https://github.com/jasonSchroeder89)
 * [Nick Deters](https://github.com/NickDetz)
 * [Timothy Cahill](https://github.com/TimmyCahill)
+* [Cody Moody](https://github.com/codyjmoody)
