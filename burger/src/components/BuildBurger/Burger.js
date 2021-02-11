@@ -34,7 +34,7 @@ import './burger.css'
 
 
     return (
-        <Container>
+        <Container >
             
         <Form.Group>
         <Form.Control size="lg" onChange={e => setBurgerName(e.target.value)} placeholder="Name your Burger" />
@@ -42,8 +42,8 @@ import './burger.css'
         <Row>
             <Col>
         <Modal.Dialog >
-                <Modal.Header className="display-flex justify-content-center">
-                <Modal.Title >{burgerName}</Modal.Title>
+                <Modal.Header className="display-flex justify-content-center test-class">
+                <Modal.Title  >{burgerName}</Modal.Title>
                 </Modal.Header>
 
                  <Modal.Body>

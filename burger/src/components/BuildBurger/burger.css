@@ -2,3 +2,29 @@
   height: 75%;
   width: 75%;
 }
+
+body{
+  background-color: #add8e6;
+}
+
+
+.home-page-alignment{
+  background-color: orange;
+  padding: .5em;
+
+}
+
+.home-page-item{
+  background-color: black;
+  width: 50em;
+
+}
+
+
+/* #testId{
+  background-color:green;
+} */
+/* 
+.test-class{
+  background-color:blue;
+} */
