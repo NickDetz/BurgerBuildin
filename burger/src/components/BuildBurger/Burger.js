@@ -34,16 +34,16 @@ import './burger.css'
 
 
     return (
-        <Container>
+        <Container >
             
-        <Form.Group>
-        <Form.Control size="lg" onChange={e => setBurgerName(e.target.value)} placeholder="Name your Burger" />
+        <Form.Group >
+        <Form.Control size="lg" onChange={e => setBurgerName(e.target.value)} placeholder="Name your Burger" className="form-control" />
         </Form.Group>
         <Row>
             <Col>
         <Modal.Dialog >
-                <Modal.Header className="display-flex justify-content-center">
-                <Modal.Title >{burgerName}</Modal.Title>
+                <Modal.Header className="display-flex justify-content-center test-class">
+                <Modal.Title  className="">{burgerName}</Modal.Title>
                 </Modal.Header>
 
                  <Modal.Body>
@@ -63,8 +63,8 @@ import './burger.css'
             </Col>
             <Col>
             <Modal.Dialog>
-                <Modal.Header closeButton>
-                <Modal.Title>Ingredients</Modal.Title>
+                <Modal.Header >
+                <Modal.Title className="ingredient-stuff">Ingredients</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>
