@@ -1,18 +1,18 @@
 import React, {useState} from 'react'
 import axios from 'axios';
 import { Container, Form, Modal, Button, Col, Row, InputGroup, ToggleButton, ToggleButtonGroup, FormControl } from 'react-bootstrap'
-import topBun from './burgeringrediants/topbun.png';
-import botBun from './burgeringrediants/bottombun.png';
-import cheese from './burgeringrediants/cheese.png';
-import onion from './burgeringrediants/Onion.png';
-import pickle from './burgeringrediants/pickles.png';
-import patty from './burgeringrediants/patty.png';
+import topBun from './burgeringredients/topbun.png';
+import botBun from './burgeringredients/bottombun.png';
+import cheese from './burgeringredients/cheese.png';
+import onion from './burgeringredients/Onion.png';
+import pickle from './burgeringredients/pickles.png';
+import patty from './burgeringredients/patty.png';
 import './burger.css'
 
 
  const Burger = () => {
     const [burgerName, setBurgerName] = useState('');
-    const [ingrediant, setIngrediant] = useState('');
+    const [ingredient, setIngredient] = useState('');
     const [ingredList, addIngred] = useState([]);
 
 
@@ -53,7 +53,7 @@ import './burger.css'
             <Col>
             <Modal.Dialog>
                 <Modal.Header closeButton>
-                <Modal.Title>Ingrediants</Modal.Title>
+                <Modal.Title>Ingredients</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>
@@ -62,15 +62,15 @@ import './burger.css'
                     <InputGroup.Text id="basic-addon1"></InputGroup.Text>
                     </InputGroup.Prepend>
                     <FormControl
-                     placeholder="ingrediant Name"
+                     placeholder="Ingredient Name"
                         aria-label="Username"
                      aria-describedby="basic-addon1"
-                     onChange={(e) => setIngrediant(e.target.value)}
+                     onChange={(e) => setIngredient(e.target.value)}
                         />
                         </InputGroup>
                 </Modal.Body>
                 <Modal.Footer>
-                {ingredList.length < 4 && <Button variant='info' onClick={() => addIngred([...ingredList, ingrediant])}>add ingrediant</Button> }
+                {ingredList.length < 4 && <Button variant='info' onClick={() => addIngred([...ingredList, ingredient])}>Add Ingredient</Button> }
                 {ingredList.length > 0 && <Button variant='danger' onClick={() => addIngred([])} >Clear</Button>}
                 
                 </Modal.Footer>
