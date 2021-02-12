@@ -16,23 +16,34 @@ import './burger.css'
     const [ingredList, addIngred] = useState([]);
 
 
-
+    const SendBurger = () => {
+        console.log('Burger')
+        console.log(ingredList[3])
+        console.log(burgerName)
+         axios.post(`http://localhost:8080/burger-builder/burger`,{
+             name: burgerName,
+             ingredient1: ingredList[0],
+             ingredient2: ingredList[1],
+             ingredient3: ingredList[2],
+             ingredient4: ingredList[3],
+         })
+    }
 
     
     
 
 
     return (
-        <Container>
+        <Container >
             
-        <Form.Group>
-        <Form.Control size="lg" onChange={e => setBurgerName(e.target.value)} placeholder="Name your Burger" />
+        <Form.Group >
+        <Form.Control size="lg" onChange={e => setBurgerName(e.target.value)} placeholder="Name your Burger" className="form-control" />
         </Form.Group>
         <Row>
             <Col>
         <Modal.Dialog >
-                <Modal.Header className="display-flex justify-content-center">
-                <Modal.Title >{burgerName}</Modal.Title>
+                <Modal.Header className="display-flex justify-content-center test-class">
+                <Modal.Title  className="">{burgerName}</Modal.Title>
                 </Modal.Header>
 
                  <Modal.Body>
@@ -46,14 +57,14 @@ import './burger.css'
                 </Modal.Body>
 
                 <Modal.Footer>
-                <Button variant="secondary">Send</Button>
+                <Button variant="secondary" onClick={() => SendBurger()}>Send</Button>
             </Modal.Footer>
             </Modal.Dialog>
             </Col>
             <Col>
             <Modal.Dialog>
-                <Modal.Header closeButton>
-                <Modal.Title>Ingredients</Modal.Title>
+                <Modal.Header >
+                <Modal.Title className="ingredient-stuff">Ingredients</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>
@@ -77,6 +88,7 @@ import './burger.css'
                 {ingredList.length > 0 && <Button variant='danger' onClick={() => addIngred([])} >Clear</Button>}
                 
                 </Modal.Footer>
+
             </Modal.Dialog>
 
             <Modal.Dialog>
@@ -104,6 +116,7 @@ import './burger.css'
                     </Table>
                 </Modal.Body>
             </Modal.Dialog>
+
 
             </Col>
             </Row>

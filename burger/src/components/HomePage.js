@@ -7,21 +7,21 @@ import burgers from './burgpics/burgers.png';
  const HomePage = () => {
     return (
         <Container>
-            <Row>
+            <Row className="home-page-alignment">
                 <Col lg={6}>
                     <Card>
-                    <Card.Img variant="top" src={burger}/>
-                <Link to='/NewBurger'>
-                <Button> Make a new Burger</Button>
+                    <Card.Img variant="top" src={burger} className="home-page-item"/>
+                <Link  to='/NewBurger'>
+                <Button className="my-button"> Make a new Burger</Button>
                 </Link>
                 </Card>
                 </Col>
 
                 <Col lg={6}>
                 <Card>
-                <Card.Img variant="top" src={burgers}/>
+                <Card.Img variant="top" src={burgers} className="home-page-item"/>
                     <Link to='/Burgers'>
-                <Button> See Previous Burgers</Button>
+                <Button className="my-button"> See Previous Burgers</Button>
                     </Link>
                     </Card>
                 </Col>

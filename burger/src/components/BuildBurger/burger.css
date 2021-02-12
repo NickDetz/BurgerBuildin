@@ -1,4 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Sofia&display=swap');
+
 .foodImage {
   height: 75%;
   width: 75%;
 }
+
+body{
+  background-color: #add8e6;
+}
+
+
+.home-page-alignment{
+  /* background-color: orange; */
+  padding: 1em;
+  /* float: left; */
+
+}
+
+.my-button{
+  /* padding: 15px 32px; */
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+.home-page-item{
+    float: left;
+    width:  400px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: .4em;
+    margin-left: auto;
+    margin-right: auto;
+    border:solid black .2em;
+    border-radius: 1.5em;
+
+}
+
+.form-control{
+  margin-top: 1em;
+}
+
+.ingredient-stuff{
+  text-align: center;
+  margin-left: 10%;
+   font-family: 'Sofia', cursive;
+}
+
