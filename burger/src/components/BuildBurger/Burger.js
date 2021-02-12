@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios';
-import { Container, Form, Modal, Button, Col, Row, InputGroup, ToggleButton, ToggleButtonGroup, FormControl } from 'react-bootstrap'
+import { Container, Form, Modal, Button, Col, Row, InputGroup, ToggleButton, ToggleButtonGroup, FormControl, Table } from 'react-bootstrap'
 import topBun from './burgeringredients/topbun.png';
 import botBun from './burgeringredients/bottombun.png';
 import cheese from './burgeringredients/cheese.png';
@@ -80,13 +80,44 @@ import './burger.css'
                         />
                         </InputGroup>
                 </Modal.Body>
+
+                
+
                 <Modal.Footer>
                 {ingredList.length < 4 && <Button variant='info' onClick={() => addIngred([...ingredList, ingredient])}>Add Ingredient</Button> }
                 {ingredList.length > 0 && <Button variant='danger' onClick={() => addIngred([])} >Clear</Button>}
                 
                 </Modal.Footer>
-                </Modal.Dialog>
-              
+
+            </Modal.Dialog>
+
+            <Modal.Dialog>
+                <Modal.Header>
+                    <Modal.Title>Selected Ingredients</Modal.Title>
+                </Modal.Header>
+
+                <Modal.Body>
+                <Table bordered hover size="sm">
+                    <thead>
+                        <tr>
+                        <th>#</th>
+                        <th>Ingredient Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {ingredList.map((x, i) => {
+                            
+                            return  (<tr>
+                                        <td>{i+1}</td>
+                                        <td>{x}</td>
+                                    </tr>);
+                        })}
+                    </tbody>
+                    </Table>
+                </Modal.Body>
+            </Modal.Dialog>
+
+
             </Col>
             </Row>
 
